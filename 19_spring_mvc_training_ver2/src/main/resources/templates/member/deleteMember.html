@@ -7,8 +7,9 @@
 <script>
 
 	$(function(){
+		
 		$("#confirmDelete").keyup(function(){
-			if ("${sessionScope.memberId}/탈퇴" == $(this).val()) {
+			if ("[[${session.memberId}]]/탈퇴" == $(this).val()) {
 				$("[type='submit']").prop("disabled" , false);
 				
 			}
@@ -29,8 +30,7 @@
 		<h3>회원탈퇴 </h3>
 		<p><span style="color:red;">정말 탈퇴하시겠습니까?</span></p>
 		<form th:action="@{/member/deleteMember}" method="post" >
-		
-			<p>진한 글씨(<strong>[[${session.memberId}]]/탈퇴</strong>)를 입력하세요.</p>
+			<p>진한 글씨(<strong th:text="|${session.memberId}/탈퇴|"></strong>)를 입력하세요.</p>
 			<p>
 				<input type="text" id="confirmDelete" />
 			</p>

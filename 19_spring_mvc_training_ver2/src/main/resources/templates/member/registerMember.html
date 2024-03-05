@@ -59,7 +59,7 @@
 			let memberId = $("#memberId").val();
 		    if (memberId == '') {
 		    	$("#isValidIdMsg").html("<span style='color:red;'>아이디를 입력하세요.</span>");
-		   		return;
+		   		return;   
 		    }
 		   
 		    $.ajax({
@@ -104,7 +104,7 @@
 		
 	});
 	
-	
+	// form 체크
 	function checkFormValidation() {
 
 		if (!isPassId) {

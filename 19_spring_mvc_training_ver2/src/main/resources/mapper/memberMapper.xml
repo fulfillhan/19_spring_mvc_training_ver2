@@ -148,15 +148,16 @@
 	
 	
 	<select id="getInActiveMemberList" resultType="MemberDTO">
-		SELECT	
-				MEMBER_ID , 
-				PROFILE_UUID
-		FROM	
-				MEMBER
-		WHERE	
-				INACTIVE_AT > (SELECT DATE_SUB(CURRENT_DATE ,  INTERVAL 90 DAY))
-	</select>
-	
+	<![CDATA[
+			SELECT	
+					MEMBER_ID , 
+					PROFILE_UUID
+			FROM	
+					MEMBER
+			WHERE	
+					INACTIVE_AT < (SELECT DATE_SUB(CURRENT_DATE ,  INTERVAL 90 DAY))
+		]]>
+		</select>
 	
 	<delete id="deleteMember" parameterType="String">
 		DELETE FROM
