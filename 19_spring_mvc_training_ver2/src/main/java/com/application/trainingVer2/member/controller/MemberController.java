@@ -55,7 +55,7 @@ public class MemberController {
 	
 	
 	@PostMapping("/validId")
-	@ResponseBody
+	@ResponseBody 
 	public String validId(@RequestParam("memberId") String memberId) {
 		return memberService.checkValidId(memberId);
 	}

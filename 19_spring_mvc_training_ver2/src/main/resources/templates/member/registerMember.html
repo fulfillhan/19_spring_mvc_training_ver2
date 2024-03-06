@@ -52,6 +52,7 @@
 	let isPassId = false;
 	let isPassPasswd = false;
 	
+	
 	$().ready(function() {
 		
 		$("#isValidId").click(function(){
@@ -85,7 +86,6 @@
 		});	
 		
 		
-		
 		$("#confirmPasswd").blur(function(){
 			
 			let passwd = $("#passwd").val();
@@ -104,7 +104,7 @@
 		
 	});
 	
-	// form 체크
+			// form 체크
 	function checkFormValidation() {
 
 		if (!isPassId) {
@@ -119,6 +119,9 @@
 			return false;
 		}
 	}
+	
+	
+	
 	
 	
 </script>
