@@ -75,6 +75,7 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public boolean login(MemberDTO memberDTO)  {
 		
+		
 		MemberDTO validateData = memberDAO.login(memberDTO.getMemberId());
 		
 		if (validateData != null) {

@@ -11,7 +11,7 @@ public interface MemberDAO {
 
 	public void createMember(MemberDTO memberDTO);
 	public String checkValidId(String memberId);
-	public MemberDTO login(String string);
+	public MemberDTO login(String memberId);
 	public MemberDTO getMemberDetail(String memberId);
 	public void updateMember(MemberDTO memberDTO);
 	public void updateInactiveMember(String memberId);
