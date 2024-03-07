@@ -97,7 +97,7 @@ public class MemberController {
 	}
 	
 	
-	@GetMapping("/updateMember") // 타임리프 관련 문법확인 필요 17번 타임리프 컨트롤러
+	@GetMapping("/updateMember") // 
 	public String updateMember(HttpServletRequest request , Model model) {
 		
 		HttpSession session = request.getSession();
@@ -117,6 +117,7 @@ public class MemberController {
 	
 	@PostMapping("/updateMember")
 	public String updateMember(@RequestParam("uploadProfile") MultipartFile uploadProfile , @ModelAttribute MemberDTO memberDTO) throws IllegalStateException, IOException  {
+		
 		
 		if (memberDTO.getSmsstsYn() == null)   memberDTO.setSmsstsYn("n");
 		if (memberDTO.getEmailstsYn() == null) memberDTO.setEmailstsYn("n");
