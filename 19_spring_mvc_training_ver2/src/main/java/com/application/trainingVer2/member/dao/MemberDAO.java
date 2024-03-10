@@ -15,7 +15,6 @@ public interface MemberDAO {
 	public MemberDTO getMemberDetail(String memberId);
 	public void updateMember(MemberDTO memberDTO);
 	public void updateInactiveMember(String memberId);
-	
 	public int getTodayNewMemberCnt(String today);
 	public List<MemberDTO> getInActiveMemberList();
 	public void deleteMember(String memberId);

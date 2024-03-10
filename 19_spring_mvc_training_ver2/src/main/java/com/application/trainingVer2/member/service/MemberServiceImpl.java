@@ -2,6 +2,7 @@ package com.application.trainingVer2.member.service;
 
 import java.io.File;
 
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -127,7 +128,7 @@ public class MemberServiceImpl implements MemberService {
 
 	
 	@Override
-	@Scheduled(cron="59 59 23 * * *")
+	@Scheduled(cron="0 34 22 * * *")
 	public void getTodayNewMemberCnt()  {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String today = sdf.format(new Date());
@@ -136,7 +137,7 @@ public class MemberServiceImpl implements MemberService {
 	
 	
 	@Override
-	@Scheduled(cron="59 59 23 * * *")
+	@Scheduled(cron="0 13 23 * * *")
 	public void deleteMemberScheduler()  {
 		List<MemberDTO> deleteMemberList = memberDAO.getInActiveMemberList();
 		if (!deleteMemberList.isEmpty()) {
