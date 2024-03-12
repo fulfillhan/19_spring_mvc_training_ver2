@@ -143,7 +143,7 @@ public class MemberServiceImpl implements MemberService {
 		if (!deleteMemberList.isEmpty()) {
 			for (MemberDTO memberDTO : deleteMemberList) {
 				new File(fileRepositoryPath + memberDTO.getProfileUUID()).delete();
-				memberDAO.deleteMember(memberDTO.getMemberId());
+				 memberDAO.deleteMember(memberDTO.getMemberId());
 			}
 		}
 	}
