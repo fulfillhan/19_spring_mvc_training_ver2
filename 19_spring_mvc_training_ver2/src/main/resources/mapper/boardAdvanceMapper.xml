@@ -11,9 +11,9 @@
 						SELECT 
 								COUNT(*) 
 						FROM 
-								MAIN_BOARD
+								MAIN_BOARD    
 					</when>
-					<otherwise>
+					<otherwise>				
 						SELECT 
 								COUNT(*) 
 						FROM 

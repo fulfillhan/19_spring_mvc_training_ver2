@@ -33,6 +33,7 @@ public class BoardAdvanceController {
 								@RequestParam(name="onePageViewCnt" , defaultValue = "10")  int onePageViewCnt,
 								@RequestParam(name="currentPageNumber" , defaultValue = "1") int currentPageNumber) {
 		
+			
 		Map<String, String> searchCntMap = new HashMap<String, String>();
 		searchCntMap.put("searchKeyword", searchKeyword);
 		searchCntMap.put("searchWord", searchWord);
