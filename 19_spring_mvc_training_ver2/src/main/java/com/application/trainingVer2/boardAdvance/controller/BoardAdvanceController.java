@@ -26,12 +26,12 @@ public class BoardAdvanceController {
 	private BoardAdvanceService boardAdvanceService;		
 	
 	
-	@GetMapping("/boardList")
-	public String boardList(Model model ,
-							@RequestParam(name="searchKeyword" , defaultValue = "total") String searchKeyword,
-							@RequestParam(name="searchWord" , defaultValue = "") String searchWord,
-							@RequestParam(name="onePageViewCnt" , defaultValue = "10")  int onePageViewCnt,
-							@RequestParam(name="currentPageNumber" , defaultValue = "1") int currentPageNumber) {
+		@GetMapping("/boardList")
+		public String boardList(Model model ,
+								@RequestParam(name="searchKeyword" , defaultValue = "total") String searchKeyword,
+								@RequestParam(name="searchWord" , defaultValue = "") String searchWord,
+								@RequestParam(name="onePageViewCnt" , defaultValue = "10")  int onePageViewCnt,
+								@RequestParam(name="currentPageNumber" , defaultValue = "1") int currentPageNumber) {
 		
 		Map<String, String> searchCntMap = new HashMap<String, String>();
 		searchCntMap.put("searchKeyword", searchKeyword);
