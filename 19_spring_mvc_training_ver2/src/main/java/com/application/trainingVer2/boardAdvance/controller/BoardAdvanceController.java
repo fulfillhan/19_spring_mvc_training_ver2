@@ -41,7 +41,7 @@ public class BoardAdvanceController {
 		
 		int allBoardCnt = boardAdvanceService.getAllBoardCnt(searchCntMap);
 		
-		int allPageCnt = allBoardCnt / onePageViewCnt + 1;
+		int allPageCnt = allBoardCnt / onePageViewCnt+1;
 		
 		if (allBoardCnt % onePageViewCnt == 0) allPageCnt--;
 		
@@ -56,7 +56,7 @@ public class BoardAdvanceController {
 		if (endPage == 0) endPage = 1;
 		
 		
-		int startBoardIdx = (currentPageNumber - 1) * onePageViewCnt;
+		int startBoardIdx = (currentPageNumber - 1) * onePageViewCnt;// 2 -1 / 5  3-1*5 10  / 
 		
 		model.addAttribute("startPage"         , startPage);
 		model.addAttribute("endPage"           , endPage);
