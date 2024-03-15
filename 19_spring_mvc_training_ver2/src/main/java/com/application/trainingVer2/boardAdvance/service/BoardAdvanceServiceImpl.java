@@ -40,10 +40,10 @@ public class BoardAdvanceServiceImpl implements BoardAdvanceService {
 	public int getAllBoardCnt(Map<String, String> searchCntMap) {
 		return boardAdvanceDAO.getAllBoardCnt(searchCntMap);
 	}
-	//트랜젝션질문과 isIncreaseReadCnt을 굳이 boolean로 넣어 true로 반환되게끔 하는이유는?
+	 
 	@Override
-	@Transactional //데이터베이스의 상태를 변화시키기 위해 수행하는 하나의 작업 기본단위
 	public MainBoardDTO getBoardDetail(long boardId, boolean isIncreaseReadCnt) {
+		
 		if(isIncreaseReadCnt) {
 			boardAdvanceDAO.updateReadCnt(boardId);
 		}

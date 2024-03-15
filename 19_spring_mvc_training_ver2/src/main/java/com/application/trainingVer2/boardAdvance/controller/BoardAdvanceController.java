@@ -111,7 +111,7 @@ public class BoardAdvanceController {
 								     @RequestParam("menu") String menu ,
 									 @RequestParam("boardId") long boardId){
 		
-		model.addAttribute("mainBoardDTO" , boardAdvanceService.getBoardDetail(boardId , true));
+		model.addAttribute("mainBoardDTO" , boardAdvanceService.getBoardDetail(boardId , false));
 		model.addAttribute("menu" , menu);
 		
 		return "boardAdvance/board/authentication";
