@@ -68,8 +68,8 @@
 						LIMIT 
 								#{startBoardIdx},#{onePageViewCnt}
 					</otherwise>
-				</choose>
-			</when>
+					</choose>
+				</when>
 			<otherwise>
 				SELECT
 						*
