@@ -193,11 +193,12 @@ public class BoardAdvanceController {
 		return "boardAdvance/reply/createReply";
 	}
 	
-	
+	//질문:redirect:/boardAdvance/board/boardDetail 가 안되는이유는?
 	@PostMapping("/createReply")
 	public String createReply(@ModelAttribute ReplyDTO replyDTO){
 		boardAdvanceService.createReply(replyDTO);
 		return "redirect:/boardAdvance/boardDetail?boardId=" + replyDTO.getBoardId();
+	
 	}
 	
 	

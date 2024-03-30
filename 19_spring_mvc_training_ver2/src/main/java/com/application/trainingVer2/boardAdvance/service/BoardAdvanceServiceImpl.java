@@ -105,7 +105,7 @@ public class BoardAdvanceServiceImpl implements BoardAdvanceService {
 			
 			dummyBoardList.add(temp);
 			
-		}
+		}	
 		
 		boardAdvanceDAO.createBoardDummy(dummyBoardList);
 		

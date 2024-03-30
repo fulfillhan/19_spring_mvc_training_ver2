@@ -81,7 +81,6 @@
 			</tr>
 			<tbody id="boardList">
 				<tr align="center" th:each="mainBoardDTO : ${boardList}">
-					<!--질문1 (이해가안됨)-->
 					<td th:text="${startBoardIdx + mainBoardDTOStat.count}"></td>
 					<td><a th:href="@{/boardAdvance/boardDetail(boardId=${mainBoardDTO.boardId })}" th:text="${mainBoardDTO.subject}"></a></td>
 					<td th:text="${mainBoardDTO.writer}"></td>
